@@ -35,9 +35,10 @@ namespace CSF1Homework
             do
             {
 
-                string username = "Username1";
+                string username = "12345";
                 bool accessDeniedUser = false;//condition for DO WHILE username
-                int usernameAttempt = 1;//counter for IF username
+                int userAttempt = 1;//counter for IF username & IF password
+
                 do
                 {
 
@@ -49,8 +50,7 @@ namespace CSF1Homework
 
                         //username is correct. Now they need to match password.
                         bool accessDeniedPass = false;
-                        string password = "12345";
-                        int passwordAttempt = 1;
+                        string password = "54321";
 
                         do
                         {
@@ -69,35 +69,32 @@ namespace CSF1Homework
                             else
                             {
 
-                                if (passwordAttempt < 3)
+                                if (userAttempt < 3)
                                 {
                                     Console.WriteLine("Password Incorrect. Please try again.");
-                                    passwordAttempt++;
+                                    userAttempt++;
                                 }
 
                                 else
                                 {
                                     Console.WriteLine("Too many unsuccessful attempts. Please contact our customer service department.");
                                     accessDeniedPass = true;
-
+                                    accessDeniedUser = true;
                                 }
 
                             }//END ELSE - PASSWORD INCORRECCT
 
                         } while (accessDeniedPass == false);
 
-
                     }//END IF -USER ACCESS GRANTED
-
 
                     else //we're here if they incorrectly input username
                     {
 
-
-                        if (usernameAttempt < 3)
+                        if (userAttempt < 3)
                         {
                             Console.WriteLine("Username not recognized.");
-                            usernameAttempt++;
+                            userAttempt++;
                         }
 
                         else
@@ -108,6 +105,7 @@ namespace CSF1Homework
                         }//END ELSE - USER ACCESS DENIED
 
                     }//END ELSE - INCORRECT USERNAME
+
                 } while (accessDeniedUser == false);
 
             } while (login == false);
