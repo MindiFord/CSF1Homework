@@ -10,6 +10,7 @@ namespace CSF1Homework
     {
         static void Main(string[] args)
         {
+            #region Instructinons
 
             /*Declare and initialize an array of any six fruit names (as text). Set up a FOR loop
              * and iterate through them (displaying each value in the console).
@@ -17,6 +18,8 @@ namespace CSF1Homework
              * For each of the fruit names that you display, on the next line display a number of periods
              * that is equal to the number of the index of the array.
              */
+
+            #endregion
 
             string[] fruits = { "peach", "plum", "papaya", "pineapple", "pomegranate", "persimmon" };
             string period = ".";

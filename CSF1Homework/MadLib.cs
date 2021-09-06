@@ -10,11 +10,14 @@ namespace CSF1Homework
     {
         static void Main(string[] args)
         {
+            #region Instructions
 
             /*
              * Create a "mad lib" that asks the user for various pieces of information. Store the information as
              * strings. Once the information has been collected, output a story using the stored information.
              */
+
+            #endregion
 
             Console.WriteLine("Let's do a MadLib!! Here's how you play. I'll ask for a type of word and you choose anything you want! Then I'll print a silly story for you using your words.\n\nQuick Tips:\nA noun is a person, place, or thing.\nEx: teacher, palace, bag\n\nA verb is an action.\nEx: run, jump, swim\n\nAn adverb usually ends in \"ly\" and describes an action.\nEx: quickly, busily, slowly\n\nAn adjective describes a person, place, or thing.\nEx: fuzzy, silly, cold\n\nThe Blob\n\n");
 

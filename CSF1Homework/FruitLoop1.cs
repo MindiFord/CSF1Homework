@@ -10,9 +10,13 @@ namespace CSF1Homework
     {
         static void Main(string[] args)
         {
+            #region Instructions
+
             /*Declare and initialize an array of any six fruit names (as text). Set up a FOR loop and iterate through them
              * (displaying each value in the console.
              */
+
+            #endregion
 
             Console.WriteLine("Fruit Loop 1 Lab\n");
 

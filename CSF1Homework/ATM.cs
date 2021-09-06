@@ -48,7 +48,7 @@ namespace CSF1Homework
             Console.WriteLine("Welcome to Some Bank!!\n\n");
             string accountNbr = "12345";
             bool accountAccess = false;
-            bool loginAccess = false;
+            bool programRunning = true;
             int accountAttempt = 1;
             decimal amountInAccount = 0;
 
@@ -80,7 +80,7 @@ namespace CSF1Homework
                             {
 
 
-                                Console.WriteLine("\nWhat would you like to do?\n1) Deposit\n2) Withdrawal\n3) Balance\n4) Exit");
+                                Console.WriteLine("\nWhat would you like to do?\n1) Deposit\n2) Withdrawal\n3) Balance\n4) Exit\n");
 
                                 string userChoice = Console.ReadLine().ToUpper();
 
@@ -114,7 +114,8 @@ namespace CSF1Homework
                                     case "E":
                                     case "X":
                                     case "EXIT":
-                                        Console.WriteLine("\nThank you for visiting Some Bank!");
+                                        Console.WriteLine($"\nYou currently have {amountInAccount:c} in your account.");
+                                        Console.WriteLine("\nThank you for visiting Some Bank!\n");
                                         userContinue = false;
                                         break;
 
@@ -124,7 +125,7 @@ namespace CSF1Homework
                                     
                                 }//END SWITCH - MENU
                             } while (userContinue);
-                            loginAccess = true;
+                            programRunning = false;
                             pinAccess = true;
                         }//END IF accountPin == userPin
 
@@ -144,6 +145,7 @@ namespace CSF1Homework
                                 Console.WriteLine("Too many unsuccessful attempts. Access denied.");
                                 pinAccess = true;
                                 accountAccess = true;
+                                programRunning = false;
 
                             }
 
@@ -170,7 +172,7 @@ namespace CSF1Homework
                         {
                             Console.WriteLine("Too many unsuccessful attempts. Access Denied.");
                             accountAccess = true;
-                            loginAccess = true;
+                            programRunning = false;
 
                         }
                     } while (accountAccess == false);
@@ -178,9 +180,9 @@ namespace CSF1Homework
 
                 }//END ELSE Account Access
 
-            } while (loginAccess == false);
+            } while (programRunning == true);
 
-            Console.WriteLine($"You currently have {amountInAccount:c} in your account.");
+
         }//END MAIN
     }
 }

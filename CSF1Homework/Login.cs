@@ -12,14 +12,18 @@ namespace CSF1Homework
         {
 
             #region Instructions
+
             /*
              * 1) Ask the user for thier username
              * 2) If it matches your one hard-coded, correct username, tell the user that they have access. If not, 
              *    tell the user that they have been denied access.
              * 3) Make sure the usernames (hard-coded & user input) are case sensitive (uppercase & lowercase)
              */
+
             #endregion
+
             #region Additional Functionality
+
             /* 
              * ADDITIONAL FUNCTIONALITY:
              * 4) Encase the username functionality in a loop that allows the user to make another attept if the 
@@ -31,6 +35,7 @@ namespace CSF1Homework
              *    correct password.)
              */
             #endregion
+
             bool login = false;
             do
             {
@@ -80,6 +85,7 @@ namespace CSF1Homework
                                     Console.WriteLine("Too many unsuccessful attempts. Please contact our customer service department.");
                                     accessDeniedPass = true;
                                     accessDeniedUser = true;
+                                    login = true;
                                 }
 
                             }//END ELSE - PASSWORD INCORRECCT
