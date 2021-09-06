@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CSF1Homework.Fibonacci</StartupObject>
+    <StartupObject>CSF1Homework.Grades</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -17,19 +17,27 @@ namespace CSF1Homework
              */
             #endregion
 
-            //HOOOOWWWWWW do I capture the different variables??
+            string userScores = "";
+            string userInputString;
+            int userInputInt;
+            bool negative = false;
 
-            int score = 0;
-
+            Console.WriteLine("Please enter the scores you want to record, once at a time. \nEntering a negative number will cause the program to end and display all of the scores you entered.\n");
             do
             {
-
-                Console.Write("Enter a score: ");
-                score = Convert.ToInt32(Console.ReadLine());
-
-            } while (score >= 0);
-
-            Console.WriteLine(score);
+                userInputString = Console.ReadLine();
+                userInputInt = Convert.ToInt32(userInputString);
+                    if (userInputInt >= 0)
+                    {
+                        userScores += "\n" + userInputString;
+                    }
+                    else
+                    {
+                    negative = true;
+                    }
+            } while (negative == false);
+            Console.Clear();
+            Console.WriteLine($"Your scores: \n{userScores}");
 
         }
     }

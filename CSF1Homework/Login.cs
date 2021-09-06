@@ -36,7 +36,7 @@ namespace CSF1Homework
              */
             #endregion
 
-            bool login = false;
+            bool programRunning = false;
             do
             {
 
@@ -68,7 +68,7 @@ namespace CSF1Homework
                                 Console.WriteLine("Access Granted. Thank you for logging in!");
                                 accessDeniedUser = true;
                                 accessDeniedPass = true;
-                                login = true;
+                                programRunning = true;
                             }//END IF - PASSWORD ACCESS GRANTED
 
                             else
@@ -85,7 +85,7 @@ namespace CSF1Homework
                                     Console.WriteLine("Too many unsuccessful attempts. Please contact our customer service department.");
                                     accessDeniedPass = true;
                                     accessDeniedUser = true;
-                                    login = true;
+                                    programRunning = true;
                                 }
 
                             }//END ELSE - PASSWORD INCORRECCT
@@ -107,14 +107,14 @@ namespace CSF1Homework
                         {
                             Console.WriteLine("Too many unsuccessful attempts. Access denied.");
                             accessDeniedUser = true;
-                            login = true;
+                            programRunning = true;
                         }//END ELSE - USER ACCESS DENIED
 
                     }//END ELSE - INCORRECT USERNAME
 
                 } while (accessDeniedUser == false);
 
-            } while (login == false);
+            } while (programRunning == false);
 
         }//END MAIN
     }
